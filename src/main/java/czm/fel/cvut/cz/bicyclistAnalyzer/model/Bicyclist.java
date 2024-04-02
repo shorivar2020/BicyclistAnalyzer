@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 @Data
 @Entity
 @EqualsAndHashCode(callSuper = false)
-public class BicyclistStatistics {
+public class Bicyclist {
 
     @jakarta.persistence.Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -1,5 +1,5 @@
 package czm.fel.cvut.cz.bicyclistAnalyzer.controller;
-import czm.fel.cvut.cz.bicyclistAnalyzer.model.BicyclistStatistics;
+import czm.fel.cvut.cz.bicyclistAnalyzer.model.Bicyclist;
 import czm.fel.cvut.cz.bicyclistAnalyzer.service.BicyclistStatisticsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -12,12 +12,12 @@ public class BicyclistStatisticsController {
     private BicyclistStatisticsService service;
 
     @GetMapping
-    public List<BicyclistStatistics> getAllStatistics() {
+    public List<Bicyclist> getAllStatistics() {
         return service.getAllStatistics();
     }
 
     @PostMapping
-    public void addStatistics(@RequestBody BicyclistStatistics statistics) {
+    public void addStatistics(@RequestBody Bicyclist statistics) {
         service.saveStatistics(statistics);
     }
 
