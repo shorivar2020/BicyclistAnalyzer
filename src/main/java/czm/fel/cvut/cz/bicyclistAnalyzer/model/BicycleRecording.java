@@ -9,15 +9,15 @@ import java.time.LocalDateTime;
 @Data
 @Entity
 @EqualsAndHashCode(callSuper = false)
-public class Bicyclist {
+public class BicycleRecording {
 
     @jakarta.persistence.Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long ID;
     private String cameraCode;
     private String nextCameraCode;
-    private LocalDateTime measurementStart;
-    private LocalDateTime measurementEnd;
+    private LocalDateTime recordingStart;
+    private LocalDateTime recordingEnd;
     private int bicycleCount;
 
 }
